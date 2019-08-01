@@ -1,6 +1,6 @@
-# 工作学习中的一些js总结小demo，记录下来参考使用
+# 工作学习中的一些js总结小demo，做一个记录文档
 
-### ALEXLIN
+### BY ALEXLIN
 
 
 ​	
