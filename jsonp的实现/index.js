@@ -7,6 +7,8 @@ function jsonp({url,params,callback}) {
         // 将回调函数挂在window上
         window[callback] = function (data) { // callback回调执行
             resolve(data); // 返回data
+
+            delete window[callback];
             // 代码执行后，删除插入的script标签
             document.body.removeChild(script);
         }

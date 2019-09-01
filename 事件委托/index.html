@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #body{
+            width: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        #body ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        #body ul li {
+            flex-grow: 1;
+            background: red;
+            border: 1px solid yellow;
+            height: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

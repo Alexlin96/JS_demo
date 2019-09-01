@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt">
+    <button onclick="changeInput()">点击</button>
+    <div id="box"></div>
+</body>
+<script>
+    const data = {};
+
+    let iptDom = document.getElementById('ipt');
+    let boxDom = document.getElementById('box');
+
+    Object.defineProperty(data,'text',{
+        get(){
+            console.log(`属性被读取了...${this.newVal}`);
+            return this.newVal // this.newVal 绑定一个属性val返回出去 作为这个对象的value
+        },
+        set(newVal){
+            console.log(`属性被修改了...${newVal}`);
+            iptDom.value = newVal;
+            this.newVal = newVal;
+        }
+    })
+    
+    iptDom.onchange = (e)=>{
+        data.text = e.target.value;
+        boxDom.innerHTML = data.text;
+    }
+
+    function changeInput() {
+        data.text = '改变了'
+        boxDom.innerHTML = data.text;
+    }
+</script>
+</html>

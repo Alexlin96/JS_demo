@@ -1,4 +1,11 @@
 /*
+ * @Author: Alexlin 
+ * @Date: 2019-08-26 05:19:39 
+ * @Last Modified by: Alexlin
+ * @Last Modified time: 2019-08-26 05:20:00
+ */
+
+/*
 如果是基本数据类型，直接返回
 如果是 RegExp 或者 Date 类型，返回对应类型
 如果是复杂数据类型，递归。
