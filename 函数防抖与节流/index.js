@@ -5,11 +5,21 @@ function _onresize() {
 function throttle(fn,context) {  // fn 防抖的函数  context执行上下文
     clearTimeout(fn.timer);
     fn.timer = setTimeout(()=>{
-        fn.call(context)
+        fn()
+        // fn.call(context) 
     },500)
 }
 window.onresize = () =>{
-    throttle(_onresize,window);
+    throttle(_onresize,this);
+}
+
+// 个人理解版
+
+window.onresize = () =>{
+    clearTimeout(this.timer); // 清掉上一次的定时器
+    this.timer = setTimeout(()=>{
+        console.log('onresize');
+    },1000)
 }
 
 

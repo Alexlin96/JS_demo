@@ -4,7 +4,6 @@
 2.new Fun()  构造函数实例化 new改变了函数内部的this执行，导致this指向实例化new的对象
 3.fun()匿名函数回调  this默认指向window
 */
-var name='alex';
 // 例子 回调函数中this的指向
 var Bob = {
     name:'alex',

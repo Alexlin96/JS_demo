@@ -1,7 +1,7 @@
 
 // 深拷贝
 function deepClone(obj) {
-    if(obj === null || typeof obj !== 'object') return obj;
+    if(obj === null || typeof obj !== 'object' || obj instanceof Date) return obj;
     let t ; // 用来存当前方法拷贝的对象
     if(Object.prototype.toString.call(obj) === '[object Array]'){
         t = [];
