@@ -30,3 +30,14 @@ Bob.intr()
 // }
 // Bob.intr()
 // 箭头函数this指向定义时所在的对象，所以这个时候指向Bob
+
+var person={
+    age:20,
+    getAge(){
+        ( () => {
+            console.log('this.age', this.age) // 箭头函数this指向定义时所在的对象，所以这个时候指向person
+        })()
+        return this.age;
+     },
+ };
+ person.getAge(); // 20
