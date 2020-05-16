@@ -24,3 +24,4 @@ this.$http.get(`/xxx`).then(res => {
 }).catch(error => {
   console.info(error)
 })
+
