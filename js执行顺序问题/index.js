@@ -1,3 +1,10 @@
+/*
+ * @Autor: alexlin
+ * @Date: 2020-03-18 14:27:01
+ * @Version: xxx.v1.0
+ * @LastEditTime: 2020-05-22 17:55:02
+ * @Description: 
+ */ 
 // const foo = () => console.log("First");
 // const bar = () => setTimeout(() => console.log("Second"));
 // const baz = () => console.log("Third");
@@ -24,10 +31,10 @@ test()
 
 
 // ---------------------------------------------------------------------------
-setTimeout(()=>{
-    task();
-},3000)
-sleep(10000000)
+// setTimeout(()=>{
+//     task();
+// },3000)
+// sleep(10000000)
 
 /*
 task()进入event table注册，计时开始
