@@ -13,3 +13,5 @@ function nullOption() {
 }
 nullOption()
 console.log('结果testObj',testObj)  // 这里不会为null
+
+// null是基本类型，updateObj = null之后只是把a存储在栈内存中地址改变成了基本类型null，并不会影响堆内存中的对象，所以testObj的值不受影响
