@@ -17,3 +17,5 @@ txs['age'] = 23  // 这个时候没有改变原来的地址 所有会影响到�
 
 console.log('obj1',obj);
 console.log('obj2',txs);
+
+

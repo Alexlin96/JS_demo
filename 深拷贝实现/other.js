@@ -1,5 +1,7 @@
  // 深拷贝
 function deepClone(obj) {
+  if (obj instanceof Date) return new Date(obj.valueOf()) // 处理日期
+  if (obj instanceof RegExp) return new RegExp(obj) // 处理正则
   if (obj === null || typeof obj !== "object") return obj;
   let t; // 用来存当前方法拷贝的对象
   if (Object.prototype.toString.call(obj) === "[object Array]") {

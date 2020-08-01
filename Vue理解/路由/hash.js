@@ -9,16 +9,18 @@
  let app =  document.getElementById('app')
 
  function RouterClass() {
-   this.routes = {}
+   this.routes = {} // 路由数据
    this.curUrl = '' // 初始化url
    this.eventHashRouter()
  }
 
+// 事件监听
  RouterClass.prototype.eventHashRouter = () => { // 监听hashchange
   window.addEventListener("load", this.hashRouter.bind(this));
   window.addEventListener('hashchange', this.hashRouter.bind(this))
  }
 
+ // 获取hash数据
  RouterClass.prototype.hashRouter = () => {
    this.curUrl = window.location.hash.slice(1) || '/' // 去除'#'
    this.routes[this.curUrl]()

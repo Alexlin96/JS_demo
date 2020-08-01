@@ -1,5 +1,5 @@
 // 模拟 instanceof
-function instance_of(L, R) {
+function instance_of(L, R) { // L相当于实例  R相当于构造函数
     //L 表示左表达式，R 表示右表达式
     var O = R.prototype; // 取 R 的显示原型
     L = L.__proto__; // 取 L 的隐式原型
@@ -11,5 +11,5 @@ function instance_of(L, R) {
       L = L.__proto__;
     }
   }
-  let res = instance_of([1,0,3],Function)
+  let res = instance_of([1,0,3],Array)
   console.log('res',res)

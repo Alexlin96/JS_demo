@@ -29,7 +29,7 @@
         }
     })
     
-    iptDom.onchange = (e)=>{
+    iptDom.oninput = (e)=>{
         data.text = e.target.value;
         boxDom.innerHTML = data.text;
     }

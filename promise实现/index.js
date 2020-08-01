@@ -9,11 +9,7 @@ class MyPromise {
 		this._callbacks = []; // resolve回调数组
     this._callbacksForRejected = []; // reject回调数组
     this.fn = fn
-    this.sayHello()
 		this.handlePromise()
-  }
-  sayHello() {
-    console.log('4444',this._state)
   }
 	handlePromise() {
 		const that = this
