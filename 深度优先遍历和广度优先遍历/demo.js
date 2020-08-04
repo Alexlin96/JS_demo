@@ -74,3 +74,43 @@ function findTop(data, id) {
 }
 
 console.log('子节点6的顶点是', findTop(urlList, 6))
+
+// --------------------------------------------
+
+function dfs(data) { // 深度优先
+  let stack = []
+  let res = []
+
+  stack.push(data)
+  while(stack.length !== 0) {
+    let item = stack.pop() //删除
+    
+    res.push(item.name)
+
+    let children = typeof item.children !== 'undefined' ? item.children : []
+
+    for(let i = children.length -1 ; i > 0 ; i--) {
+      res.push(children[i])
+    }
+  }
+
+  return res
+}
+
+function bfs(data) { // 广度优先
+  let queue = []
+  let res = []
+
+  queue.push(data)
+
+  while(queue.length !==0) {
+    let item = queue.shift()
+    res.push(item.name)
+    
+    let children = typeof item.children !== 'undefined' ? item.children : []
+
+    for(let i = 0; i < children.length; i++) {
+      res.push(children[i])
+    }
+  }
+}
