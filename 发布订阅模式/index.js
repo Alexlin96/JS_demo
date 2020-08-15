@@ -35,8 +35,12 @@ event.$on('call', res => {
   console.log('call', res)
 })
 
+event.$on('call', res => {
+  console.log('call777', res)
+})
+
 // 发布
-event.$emit('call', [1,2,3,4])
+// event.$emit('call', [1,2,3,4])
 event.$emit('call', 666)
 
 // vue中eventBus的原理就是发布订阅模式

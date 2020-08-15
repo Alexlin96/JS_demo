@@ -83,7 +83,7 @@ function dfs(data) { // 深度优先
 
   stack.push(data)
   while(stack.length !== 0) {
-    let item = stack.pop() //删除
+    let item = stack.pop() // 尾部删除
     
     res.push(item.name)
 
@@ -104,7 +104,7 @@ function bfs(data) { // 广度优先
   queue.push(data)
 
   while(queue.length !==0) {
-    let item = queue.shift()
+    let item = queue.shift() // 头部删除
     res.push(item.name)
     
     let children = typeof item.children !== 'undefined' ? item.children : []
