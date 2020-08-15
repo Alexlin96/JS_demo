@@ -42,10 +42,12 @@ export const deepClone = (obj, hash = new WeakMap()) => {
   }
   return t;
 };
+import { Button } from 'element-ui' // 引入button组件
 
 const deepCopyBase = {
   install: Vue => {
     Vue.prototype.deepCopyBase = deepClone;
+    Vue.component(Button.name, Button)
   }
 };
 export default deepCopyBase;
@@ -53,4 +55,4 @@ export default deepCopyBase;
 // 引入插件 use
 import Vue from 'vue'
 import deepCopyBase from "XXXX";
-Vue.use(deepCopyBase)
+Vue.use(deepCopyBase) //初始化后 全局能直接使用deepCopyBase和Button

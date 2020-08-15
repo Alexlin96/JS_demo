@@ -1,26 +1,15 @@
-Array.prototype.myfind = function(callback) { // 这里不能用箭头函数 只能用普通函数 此时this指向这个数组
-    for(var i=0;i < this.length;i++){
-        if(callback(this[i])){  // true代码符合
-            return this[i];
-        }
+Array.prototype.findOpt = function(fn) {  //必须使用function不能使用箭头函数，this指向调用的数组 fn回调函数
+  console.log('this', this)
+  for(let i = 0; i < this.length; i++) {
+    if(fn(this[i])) { // 存在匹配 返回第一个
+      return this[i]
     }
-    
-};
-Array.prototype.myfindindex = function(callback) {
-    for(var i=0;i < this.length;i++){
-        if(callback(this[i],i,this)){
-            return i;
-        }
-    }
-    return -1;
-};
-//测试
-var arr = [1,2,7,8,34,2,15,8];
-var v = arr.myfind((value,index,arr) => {
-    return value > 10;
-});
-console.log('v='+v);//v=34
-// var i = arr.myfindindex((value,index,arr) => {
-//     return value > 3;
-// });
-// console.log('i='+i);//i=2
+  }
+  return undefined
+}
+
+let arr = [1,2,3,4,5]
+
+let res = arr.findOpt(item => item > 2)
+
+console.log('结果', res)

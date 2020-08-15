@@ -37,8 +37,8 @@ function dfsFn(data, result = []) {
 
 // 非递归实现 (栈 先进后出)
 function dfsFn_1(data) {
-	let result = []
-	let stack = []
+	let result = [] // 栈
+	let stack = []  // 结果
 	data.forEach(el => {
 		stack.push(el)
 		while (stack.length !== 0) {

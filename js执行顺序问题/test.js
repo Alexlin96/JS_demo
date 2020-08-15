@@ -29,3 +29,5 @@ function cloneObject(obj){
     console.log('obj',obj)
 };
 newObject()
+
+// 遇到函数执行的时候，就会创建一个执行上下文
