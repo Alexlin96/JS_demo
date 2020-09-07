@@ -16,3 +16,5 @@ function Person(params) {
 // console.log(name);
 
 // Person()函数体内的name变量只有getName和setName两个函数能够访问到，外部无法访问，相当于将变量私有化。
+
+// hello
