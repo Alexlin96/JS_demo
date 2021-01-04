@@ -23,7 +23,7 @@ function addFn() {
 
 function loop() {
   if (renderRound > 0) {
-    animationID = window.requestAnimationFrame(add)
+    animationID = window.requestAnimationFrame(addFn())
   }
 }
 

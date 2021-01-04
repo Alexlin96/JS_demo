@@ -1,12 +1,12 @@
 // //闭包实现变量私有化
 function Person(params) {
-    let name = 'alex';
-    this.getName = () =>{
-        return name
-    }
-    this.setName = (newName) =>{
-        name = newName
-    }
+  let name = "alex";
+  this.getName = () => {
+    return name;
+  };
+  this.setName = (newName) => {
+    name = newName;
+  };
 }
 
 // const alex =  new Person();

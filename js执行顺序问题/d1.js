@@ -1,12 +1,12 @@
-setTimeout(function() {
-    console.log('setTimeout');
-})
+setTimeout(function () {
+  console.log("setTimeout");
+});
 
-new Promise(function(resolve) {
-    console.log('promise');
-    resolve();
-}).then(function() {
-    console.log('then');
-})
+new Promise(function (resolve) {
+  console.log("promise");
+  resolve();
+}).then(function () {
+  console.log("then");
+});
 
-console.log('console');
+console.log("console");
