@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-09-07 15:50:27
+ * @LastEditTime: 2021-03-31 15:00:20
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JS_demo\Vue理解\Vue.set的理解\index.js
+ */
 // 源码位置/src/core/observer/index.js  start----------------
 
 // 判断给定变量是否是未定义，当变量值为 null时，也会认为其是未定义
@@ -60,10 +68,11 @@ export function set (target: Array<any> | Object, key: any, val: any): any {  //
 
 /*
   理解过程：
-  1、目标是undefined或null或 null 或者是原始类型值 打印警告
-  2、目标是数组 使用数组splice触发效应式
-  3、目标是对象且key存在于对象 直接赋值
-  4、不予许给vue实例对象添加属性操作
-  5、目标是非响应数据，直接赋值
-  6、进行响应式处理
+  1、类型判断
+  2、目标是undefined或null或 null 或者是原始类型值 打印警告
+  3、目标是数组 使用数组splice触发效应式
+  4、目标是对象且key存在于对象 直接赋值
+  5、不予许给vue实例对象添加属性操作
+  6、目标是非响应数据，直接赋值
+  7、进行响应式处理
 */
