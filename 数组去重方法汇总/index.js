@@ -104,5 +104,22 @@ function setFn(arr) {
   return res
 }
 // 测试：
-let arr5 = [1, 2, 3, 2, 8, 8, 5, "a", "b", 3, "a"];
-console.log(setFn(arr5));
+let arr6 = [1, 2, 3, 2, 8, 8, 5, "a", "b", 3, "a"];
+console.log(setFn(arr6));
+
+// 排序后去重 相邻字符比较
+function sortFn(arr) {
+  arr.sort()
+  let now = ''
+  let res = []
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0 || now !== arr[i]) {
+      now = arr[i]
+      res.push(arr[i])
+    }
+  }
+  return res
+}
+let arr7 = [1, 2, 3, 2, 8, 8, 5, "a", "b", 3, "a"];
+console.log(sortFn(arr7));
+
