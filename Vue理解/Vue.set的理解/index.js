@@ -76,3 +76,9 @@ export function set (target: Array<any> | Object, key: any, val: any): any {  //
   6、目标是非响应数据，直接赋值
   7、进行响应式处理
 */
+
+/*
+  如果目标是数组，直接使用数组的 splice 方法触发响应式；
+  如果目标是对象，会先判读属性是否存在、对象是否是响应式，
+  最终如果要对属性进行响应式处理，则是通过调用 defineReactive 方法进行响应式处理
+*/
