@@ -31,3 +31,5 @@ function format_4(number) {
 	const numArr = arr[0].split('') // 整数数组
   const decimal = arr[1] || '' // 小数
 }
+
+// 777545454545
