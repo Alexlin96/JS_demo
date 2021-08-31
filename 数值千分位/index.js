@@ -32,4 +32,4 @@ function format_4(number) {
   const decimal = arr[1] || '' // 小数
 }
 
-// 777545454545
+// 7775
