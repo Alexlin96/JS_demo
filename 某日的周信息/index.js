@@ -43,4 +43,4 @@ const formatDate = function(date, fmt) {
   return ''
 }
 
-console.log('xxx', formatDate(getAllDay(new Date('2021-08-09'), 'right'), 'yyyy-MM-dd'))
+console.log('xxx', formatDate(getFirstOrLastDayOfWeek(new Date('2021-08-09'), 'right'), 'yyyy-MM-dd'))

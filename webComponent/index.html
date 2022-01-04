@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Components</title>
+</head>
+<body>
+  <custom-button></custom-button>
+	<template id="custom-button">
+		<button>自定义按钮</button>
+		<style>
+			button {
+				display: inline-block;
+				line-height: 1;
+				white-space: nowrap;
+				cursor: pointer;
+				text-align: center;
+				box-sizing: border-box;
+				outline: none;
+				margin: 0;
+				transition: .1s;
+				font-weight: 500;
+				padding: 12px 20px;
+				font-size: 14px;
+				border-radius: 4px;
+				color: #fff;
+				background-color: #409eff;
+				border-color: #409eff;
+				border: 0;
+			}
+			button:active {
+				background: #3a8ee6;
+				border-color: #3a8ee6;
+				color: #fff;
+			}
+		</style>
+	</template>
+</body>
+<script>
+	class CustomButton extends HTMLElement { // 这个自定义元素继承自 HTMLElement（HTMLElement 接口表示所有的 HTML 元素），表明这个自定义元素具有 HTML 元素的特性
+    constructor() {
+      // 必须首先调用 super方法 
+      super()
+
+			// 元素的功能代码写在这里
+			const templateContent = document.getElementById('custom-button').content
+			const shadowRoot = this.attachShadow({ mode: 'open' }) // 将影子 DOM 挂到自定义元素上 附加到自定义元素上的 DOM 功能是私有的，不会与页面其他元素发生冲突
+
+			shadowRoot.appendChild(templateContent.cloneNode(true))
+
+			shadowRoot.querySelector('button').onclick = () => {
+				alert('Hello World!')
+			}
+    }
+    connectedCallback() { // 生命周期 - 当自定义元素第一次被连接到文档 DOM 时被调用
+      console.log('connected')
+    }
+		disconnectedCallback() { // 生命周期 - 当自定义元素与文档 DOM 断开连接时被调用
+			console.log('disconnected')
+		}
+		adoptedCallback() { // 生命周期 - 当自定义元素被移动到新文档时被调用
+			console.log('adopted')
+		}
+		attributeChangedCallback() { // 当自定义元素的一个属性被增加、移除或更改时被调用
+			console.log('attributeChanged')	
+		}
+	}
+	customElements.define('custom-button', CustomButton) // customElements.define() 允许我们定义一个自定义元素和它的行为，然后在页面中使用
+</script>
+</html>

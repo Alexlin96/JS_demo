@@ -29,7 +29,7 @@ function format_3(number) {
 function format_4(number) {
 	const arr = String(number).split('.') // 小数整数部分分离
 	const numArr = arr[0].split('') // 整数数组
-  const decimal = arr[1] || '' // 小数
+  	const decimal = arr[1] || '' // 小数
 }
 
 // 77754545454
