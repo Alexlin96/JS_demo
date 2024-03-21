@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex属性理解</title>
+</head>
+<style>
+  .box {
+    display: flex;
+    width: 500px;
+    height: 200px;
+    background: yellowgreen;
+  }
+  .item {
+    line-height: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+    border: 1px solid red;
+  }
+  
+</style>
+<body>
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+  </div>
+</body>
+<script>
+  /**
+   * flex有3个属性
+   * flex:1 相当于设置1 1 0
+   * flex-grow 放大比例 只有父元素的大小大于所有子元素之和时才有效果
+   * flex-shrink 缩小比例 只有父元素的大小小于所有子元素之和时才有效果
+   * flex-basis 默认基准值，分配多余空间前占据的空间大小
+  */
+    
+</script>
+</html>
